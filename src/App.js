@@ -32,7 +32,7 @@ function App() {
           }
         </ul>
         {
-          friendsArrayObj.map(person => <Person personInfo={person}></Person>)
+          friendsArrayObj.map(person => <Person personInfo={person} ></Person>)
         }
         {
           friendsArrayObj.map(person => <li>{person.name}</li>)
@@ -76,7 +76,7 @@ function Users() {
     <div >
       {
         users.map(user => 
-          <div style={personstyle}>
+          <div style={personstyle} key={user.id}>
             <h2>{user.name}</h2>
             <p>{user.phone}</p>
             <p>{user.email}</p>
